@@ -13,7 +13,7 @@ find_word:
 	push rdi
 	push rsi
 	add rsi, 8
-	call string_equeals
+	call string_equals
 	pop rsi
 	pop rdi
 	test rax, rax
@@ -22,5 +22,5 @@ find_word:
 	jmp .loop
 .success:
 	mov rax, rsi
-.exit
+.exit:
 	ret

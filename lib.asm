@@ -1,3 +1,10 @@
+global string_length
+global print_string
+global print_newline
+global string_equals
+global print_word
+global read_word
+
 section .text
 
 ; rdi - first symbol of the string

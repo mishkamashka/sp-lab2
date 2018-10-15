@@ -11,17 +11,17 @@ fail_msg: db "Unknown word", 0
 
 section .text
 %include "colon.inc"
-%include "word.inc"
+%include "words.inc"
 
 _start:
 	call read_word
-	mov rsi, word_buffer
+	mov rsi, link
 	call find_word
 	test rax, rax
 	jz .fail
 	
 	add rax, 8
-	mov rax, rdi
+	mov rdi, rax
 	inc rdi
 	call print_string
 	jmp .exit	
