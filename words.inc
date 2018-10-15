@@ -1,8 +1,11 @@
 colon "word1", word_1
-db "word which is the first one"
+db "Word which is the first one", 0
 
 colon "word2", word_2
-db "word which is the second one"
+db "Word which is the second one", 0
 
 colon "word3", word_3
-db "word which is the third one"
+db "Word which is the third one", 0
+
+colon "hop", word_4
+db "hey lalaley", 0

@@ -22,6 +22,8 @@ _start:
 	
 	add rax, 8
 	mov rdi, rax
+	call string_length
+	add rdi, rax
 	inc rdi
 	call print_string
 	jmp .exit	
@@ -34,6 +36,7 @@ _start:
 	mov rdi, 2
 	syscall
 .exit:
+	call print_newline
 	mov rax, 60
 	mov rdi, 0
 	syscall
