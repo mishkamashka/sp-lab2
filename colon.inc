@@ -2,8 +2,6 @@
 
 %macro colon 2
     %%link: dq link	; ссылка на следующий элемент
-    db %1, 0		; ключ
-    %1: db %2, 0	; значение
-
+    %2: db %1, 0
     %define link %%link
 %endmacro
