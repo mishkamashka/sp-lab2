@@ -1,5 +1,4 @@
 global _start
-
 extern string_length
 extern read_word
 extern print_string
@@ -17,15 +16,15 @@ _start:
 	call read_word
 	mov rsi, link
 	call find_word
-	test rax, rax
+	test rax, rax		; if word not found - to error printting
 	jz .fail
 	
-	add rax, 8
+	add rax, 8		; skip link
 	mov rdi, rax
 	call string_length
-	add rdi, rax
-	inc rdi
-	call print_string
+	add rdi, rax		; skip word itself
+	inc rdi			; skip null-terminator
+	call print_string	; print definition
 	jmp .exit	
 .fail:
 	mov rdi, fail_msg
